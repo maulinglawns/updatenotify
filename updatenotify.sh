@@ -37,9 +37,6 @@ apt-get update > /dev/null
 UPDATES_AVAILABLE=$(apt-get upgrade -s --assume-no | tail -1 | \
 grep -o [1-9] | wc -c)
 
-# debugging stuff below
-# UPDATES_AVAILABLE=2
-# end debugging
 
 # Big gotcha: root (cron) cannot send messages via xmessage to another 
 # user's desktop. Therefore we have to change user and call another
